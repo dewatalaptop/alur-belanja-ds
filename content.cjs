@@ -18,7 +18,7 @@ const PHASES = [
     goal: "Menyiapkan 'aturan main': barang apa yang bisa dipesan, kategori apa saja, jam berapa pesanan ditutup, outlet mana yang wajib mengisi, dan siapa yang boleh masuk.",
     lead: "Tahap ini dikerjakan **Admin**. Setelah beres, hari-hari berikutnya tidak perlu disentuh lagi, kecuali ada barang, outlet, atau jadwal baru.",
     steps: [
-      { role: "admin", t: "Menetapkan jam tutup dan tanggal kirim", p: ["Buka **Atur → Jadwal**. Kartu **Batas waktu umum** mengatur satu jam tutup untuk semua kategori sekaligus (misalnya 20.00) dan kapan barang dibutuhkan (**Besok**, **Hari ini**, atau **Lusa**).", "Pesanan yang dibuat sore ini umumnya untuk **besok**. Karena itu 'tanggal' pada pesanan selalu berarti **tanggal barang dikirim**, bukan tanggal pesanan dibuat."], img: "ad18-atur-cutoff", cap: "Satu jam tutup untuk semua kategori." },
+      { role: "admin", t: "Menetapkan jam tutup dan tanggal kirim", p: ["Buka **Atur → Jadwal**. Kartu **Batas waktu umum** mengatur satu jam tutup untuk semua kategori sekaligus (misalnya 17.00) dan kapan barang dibutuhkan (**Besok**, **Hari ini**, atau **Lusa**).", "Pesanan yang dibuat sore ini umumnya untuk **besok**. Karena itu 'tanggal' pada pesanan selalu berarti **tanggal barang dikirim**, bukan tanggal pesanan dibuat."], img: "ad18-atur-cutoff", cap: "Satu jam tutup untuk semua kategori." },
       { role: "admin", t: "Mengatur tiap kategori", p: ["Tiap kategori (Belanja Pusat/Pasar, Keringan, Ayam Potong, Buah, Sayur, Bebek & Ayam Kampung) punya pengaturan sendiri: **dikirim lewat** (Aplikasi atau WhatsApp), **penerima di aplikasi** (Tukang Belanja atau Admin Keringan), jam tutup, kapan barang dibutuhkan, dan **outlet yang wajib mengisi**.", "Inilah yang menentukan jalur sebuah kategori setelah dilepas (lihat Tahap 4)."], img: "ad19-kategori-edit", cap: "Pengaturan satu kategori.", warn: "Mengubah tanggal kirim menggeser pesanan yang sedang dibuka. Lakukan di luar jam pengisian." },
       { role: "admin", t: "Mengatur outlet", p: ["Di **Atur → Outlet** terdaftar semua outlet beserta kodenya. Outlet yang berada di **tempat** yang sama (misalnya DS, SP, SS di Dolan Sawah) digabung di daftar supplier. Outlet nonaktif tidak wajib mengisi."], img: "ad20-atur-outlet", cap: "Daftar outlet dan tempatnya." },
       { role: "admin", t: "Mengisi katalog barang", p: ["Katalog adalah daftar barang yang bisa dipilih outlet. Buka tab **Katalog**, cari barang, atau tambah lewat **+ Barang**: nama, kategori, satuan, harga (opsional), dan outlet yang boleh memesan. Hilangkan centang **Aktif** bila barang tidak dijual lagi (lebih aman daripada menghapus)."], img: "ad11-katalog", cap: "Katalog dengan kolom cari, filter kategori, dan harga." },
@@ -28,7 +28,7 @@ const PHASES = [
   // ------------------------------------------------------------------ 1
   {
     id: "pesan", num: 1, icon: "📝", title: "Outlet membuat pesanan",
-    short: "Pesan", when: "Sore hari, sebelum jam tutup (standar 20.00)",
+    short: "Pesan", when: "Sore hari, sebelum jam tutup (standar 17.00)",
     who: ["outlet", "admin"],
     goal: "Setiap outlet menuliskan barang yang dibutuhkan besok, per kategori. Tidak ada kertas dan tidak ada chat WhatsApp.",
     lead: "Satu kategori = satu kali kirim. Untuk tiap kategori outlet punya dua pilihan: **Kirim** (ada barang yang dipesan) atau **Tidak pesan** (sudah dicek, hari ini tidak perlu). Dua-duanya dianggap 'selesai'. Yang berbahaya adalah **lupa**: kategori yang dibiarkan kosong membuat daftar tertahan.",
@@ -198,7 +198,7 @@ const SCREENS = [
 const DAY = [
   ["H-1 pagi–sore", "outlet", "Outlet mengisi pesanan untuk besok (draf tersimpan otomatis)."],
   ["H-1 menjelang jam tutup", "admin", "Admin memantau tabel Pengisian dan menekan Ingatkan yang belum."],
-  ["H-1 jam tutup (20.00) atau semua selesai", "sistem", "Daftar dilepas. Outlet yang terlambat hanya bisa lewat Susulan."],
+  ["H-1 jam tutup (17.00) atau semua selesai", "sistem", "Daftar dilepas. Outlet yang terlambat hanya bisa lewat Susulan."],
   ["H-1 malam", "belanja", "Tukang belanja meneruskan daftar WhatsApp ke grup supplier. Admin memutuskan susulan."],
   ["H dini hari–pagi", "belanja", "Belanja ke pasar; hasil dicatat (centang, harga, catatan)."],
   ["H pagi", "keringan", "Admin Keringan menyiapkan barang per outlet; stok berkurang."],

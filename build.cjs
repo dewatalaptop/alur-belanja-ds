@@ -120,7 +120,7 @@ const html = `<!doctype html>
   <h3 class="mt">Siapa mengerjakan apa</h3>
   ${matrix}
   <h3 class="mt">Satu hari contoh</h3>
-  <p class="lead small">Dengan pengaturan standar (jam tutup 20.00, barang dibutuhkan besok). Jam sebenarnya bisa berbeda per kategori: diatur admin di <b>Atur → Jadwal</b>.</p>
+  <p class="lead small">Dengan pengaturan standar (jam tutup 17.00, barang dibutuhkan besok). Jam sebenarnya bisa berbeda per kategori: diatur admin di <b>Atur → Jadwal</b>.</p>
   ${day}
 </section>
 
