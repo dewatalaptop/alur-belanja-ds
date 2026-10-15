@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alur Belanja DS</title>
+<meta name="description" content="Alur lengkap pemesanan Belanja DS dari pesanan outlet sampai barang diterima, untuk outlet, tukang belanja, admin gudang keringan, dan admin.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Alur Belanja DS: dari pesan sampai barang diterima">
+<meta property="og:description" content="Panduan alur kerja lengkap dengan potongan layar aplikasi untuk semua tim.">
+<meta property="og:image" content="img/o02-home.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🛒%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#peta">Lewati ke isi</a>
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Sistem Order Belanja · Dolan Sawah</p>
+    <h1>Alur Belanja DS<br><span>dari pesanan outlet sampai barang diterima</span></h1>
+    <p class="hero-p">Halaman ini menjelaskan <b>siapa mengerjakan apa, kapan, dan di layar yang mana</b>. Setiap langkah disertai potongan layar aplikasi sungguhan. Bingkai merah pada gambar menunjuk bagian yang dimaksud.</p>
+    <div class="hero-cta"><a class="btn" href="#peta">Lihat peta alur</a><a class="btn ghost" href="#peran">Saya sebagai…</a></div>
+  </div>
+</header>
+<nav class="topnav" aria-label="Tahapan"><div class="wrap navin"><a href="#peta">Peta</a><a href="#persiapan">0 Persiapan</a><a href="#pesan">1 Pesan</a><a href="#lepas">2 Dilepas</a><a href="#susulan">3 Susulan</a><a href="#kerja">4 Dikerjakan</a><a href="#terima">5 Diterima</a><a href="#realisasi">6 Realisasi</a><a href="#faq">Tanya jawab</a></div></nav>
+
+<main class="wrap">
+<section id="peta" class="block">
+  <h2>Peta alur</h2>
+  <p class="lead">Tujuh tahap, dari menyiapkan aturan sampai memeriksa hasil. Ketuk kartu untuk loncat ke penjelasannya.</p>
+  <ol class="map"><li><a href="#persiapan" class="mapcard"><span class="mapno">0</span><span class="mapic">⚙️</span><b>Persiapan</b><small>Sebelum dipakai, lalu sesekali</small><span class="mapwho"><span class="role r-admin">Admin</span></span></a></li><li><a href="#pesan" class="mapcard"><span class="mapno">1</span><span class="mapic">📝</span><b>Pesan</b><small>Sore hari, sebelum jam tutup (standar 20.00)</small><span class="mapwho"><span class="role r-outlet">Outlet</span><span class="role r-admin">Admin</span></span></a></li><li><a href="#lepas" class="mapcard"><span class="mapno">2</span><span class="mapic">🔓</span><b>Dilepas</b><small>Saat semua outlet selesai, atau jam tutup lewat</small><span class="mapwho"><span class="role r-admin">Admin</span><span class="role r-sistem">Otomatis</span></span></a></li><li><a href="#susulan" class="mapcard"><span class="mapno">3</span><span class="mapic">➕</span><b>Susulan</b><small>Setelah daftar dilepas, bila ada yang terlewat</small><span class="mapwho"><span class="role r-outlet">Outlet</span><span class="role r-admin">Admin</span></span></a></li><li><a href="#kerja" class="mapcard"><span class="mapno">4</span><span class="mapic">🛒</span><b>Dikerjakan</b><small>Malam hari sampai pagi sebelum barang dibutuhkan</small><span class="mapwho"><span class="role r-belanja">Tukang Belanja</span><span class="role r-keringan">Gudang Keringan</span><span class="role r-supplier">Supplier</span></span></a></li><li><a href="#terima" class="mapcard"><span class="mapno">5</span><span class="mapic">📬</span><b>Diterima</b><small>Pada tanggal kirim, begitu barang sampai</small><span class="mapwho"><span class="role r-outlet">Outlet</span></span></a></li><li><a href="#realisasi" class="mapcard"><span class="mapno">6</span><span class="mapic">📊</span><b>Realisasi</b><small>Setelah barang tiba (biasanya siang), dan berkala</small><span class="mapwho"><span class="role r-admin">Admin</span></span></a></li></ol>
+  <h3 class="mt">Siapa mengerjakan apa</h3>
+  <div class="tablewrap"><table class="matrix"><thead><tr><th>Tahap</th><th><span class="role r-outlet">Outlet</span></th><th><span class="role r-belanja">Tukang Belanja</span></th><th><span class="role r-keringan">Gudang Keringan</span></th><th><span class="role r-admin">Admin</span></th></tr></thead><tbody><tr><th scope="row">0 Persiapan</th><td><span class="dash">–</span></td><td><span class="dash">–</span></td><td><span class="dash">–</span></td><td>Atur jadwal, kategori, outlet, katalog, akun</td></tr><tr><th scope="row">1 Pesan</th><td>Mengisi dan mengirim pesanan; Tidak pesan</td><td><span class="dash">–</span></td><td><span class="dash">–</span></td><td>Memantau, mengingatkan</td></tr><tr><th scope="row">2 Dilepas</th><td>Menunggu (tidak bisa mengubah setelah dilepas)</td><td>Melihat pratinjau</td><td>Melihat pratinjau</td><td>Melepas manual / menarik kembali; Koreksi</td></tr><tr><th scope="row">3 Susulan</th><td>Mengirim susulan</td><td><span class="dash">–</span></td><td><span class="dash">–</span></td><td>Menyetujui atau menolak</td></tr><tr><th scope="row">4 Dikerjakan</th><td><span class="dash">–</span></td><td>Belanja pasar; meneruskan WhatsApp</td><td>Menyiapkan barang keringan, mengelola stok</td><td>Memantau</td></tr><tr><th scope="row">5 Diterima</th><td>Mencatat barang yang datang</td><td><span class="dash">–</span></td><td><span class="dash">–</span></td><td><span class="dash">–</span></td></tr><tr><th scope="row">6 Realisasi</th><td>Melihat selisih milik sendiri</td><td><span class="dash">–</span></td><td><span class="dash">–</span></td><td>Memeriksa dan menindaklanjuti selisih</td></tr></tbody></table></div>
+  <h3 class="mt">Satu hari contoh</h3>
+  <p class="lead small">Dengan pengaturan standar (jam tutup 20.00, barang dibutuhkan besok). Jam sebenarnya bisa berbeda per kategori: diatur admin di <b>Atur → Jadwal</b>.</p>
+  <ol class="day"><li data-role="outlet"><span class="dt">H-1 pagi–sore</span><span class="role r-outlet">Outlet</span><span class="dd">Outlet mengisi pesanan untuk besok (draf tersimpan otomatis).</span></li><li data-role="admin"><span class="dt">H-1 menjelang jam tutup</span><span class="role r-admin">Admin</span><span class="dd">Admin memantau tabel Pengisian dan menekan Ingatkan yang belum.</span></li><li data-role="sistem"><span class="dt">H-1 jam tutup (20.00) atau semua selesai</span><span class="role r-sistem">Otomatis</span><span class="dd">Daftar dilepas. Outlet yang terlambat hanya bisa lewat Susulan.</span></li><li data-role="belanja"><span class="dt">H-1 malam</span><span class="role r-belanja">Tukang Belanja</span><span class="dd">Tukang belanja meneruskan daftar WhatsApp ke grup supplier. Admin memutuskan susulan.</span></li><li data-role="belanja"><span class="dt">H dini hari–pagi</span><span class="role r-belanja">Tukang Belanja</span><span class="dd">Belanja ke pasar; hasil dicatat (centang, harga, catatan).</span></li><li data-role="keringan"><span class="dt">H pagi</span><span class="role r-keringan">Gudang Keringan</span><span class="dd">Admin Keringan menyiapkan barang per outlet; stok berkurang.</span></li><li data-role="outlet"><span class="dt">H pagi–siang</span><span class="role r-outlet">Outlet</span><span class="dd">Barang tiba. Outlet mencatat penerimaan di tab Barang datang.</span></li><li data-role="admin"><span class="dt">H siang</span><span class="role r-admin">Admin</span><span class="dd">Admin membuka Realisasi dan menindaklanjuti selisih.</span></li></ol>
+</section>
+
+<section id="peran" class="block">
+  <h2>Lima pihak yang terlibat</h2>
+  <p class="lead">Pilih peran Anda untuk menyorot bagian yang menjadi tugas Anda. Bagian milik peran lain diredupkan, tetapi tetap bisa dibaca supaya Anda paham apa yang terjadi sebelum dan sesudah tugas Anda.</p>
+  <div class="rolecards"><button type="button" class="rolecard r-outlet" data-pick="outlet"><b>Staf Outlet</b><span>Memesan barang dan mencatat barang yang datang.</span></button><button type="button" class="rolecard r-belanja" data-pick="belanja"><b>Tukang Belanja</b><span>Berbelanja di pasar dan meneruskan daftar ke supplier lewat WhatsApp.</span></button><button type="button" class="rolecard r-keringan" data-pick="keringan"><b>Admin Gudang Keringan</b><span>Menyiapkan barang keringan dari gudang dan menjaga stok.</span></button><button type="button" class="rolecard r-admin" data-pick="admin"><b>Admin</b><span>Mengawasi seluruh alur, menyetujui susulan, mengatur jadwal dan katalog.</span></button><button type="button" class="rolecard r-supplier" data-pick="supplier"><b>Supplier (di luar aplikasi)</b><span>Menerima daftar lewat grup WhatsApp dan mengantar barang.</span></button><button type="button" class="rolecard reset" data-pick="">Tampilkan semua</button></div>
+  <h3 class="mt">Menu yang dilihat tiap peran</h3>
+  <div class="screens"><div class="scr"><div class="scr-h"><span class="role r-outlet">Outlet</span></div><div class="tabsrow"><span class="tabpill">Pesan</span><span class="tabpill">Barang datang</span></div></div><div class="scr"><div class="scr-h"><span class="role r-belanja">Tukang Belanja</span></div><div class="tabsrow"><span class="tabpill">Ringkasan</span><span class="tabpill">Pasar</span><span class="tabpill">WhatsApp</span></div></div><div class="scr"><div class="scr-h"><span class="role r-keringan">Gudang Keringan</span></div><div class="tabsrow"><span class="tabpill">Pesanan</span><span class="tabpill">Stok gudang</span></div></div><div class="scr"><div class="scr-h"><span class="role r-admin">Admin</span></div><div class="tabsrow"><span class="tabpill">Pantau</span><span class="tabpill">Stok</span><span class="tabpill">Susulan</span><span class="tabpill">Katalog</span><span class="tabpill">Akun</span><span class="tabpill">Atur</span></div></div></div>
+</section>
+
+<section class="phase" id="persiapan" data-who="admin">
+  <header class="phase-head">
+    <div class="phase-no">0</div>
+    <div>
+      <h2>⚙️ Persiapan (dilakukan sekali, diubah bila perlu)</h2>
+      <div class="meta"><span class="when">🕒 Sebelum dipakai, lalu sesekali</span> <span class="role r-admin">Admin</span></div>
+    </div>
+  </header>
+  <p class="goal"><b>Tujuan.</b> Menyiapkan 'aturan main': barang apa yang bisa dipesan, kategori apa saja, jam berapa pesanan ditutup, outlet mana yang wajib mengisi, dan siapa yang boleh masuk.</p>
+  <p class="lead">Tahap ini dikerjakan <strong>Admin</strong>. Setelah beres, hari-hari berikutnya tidak perlu disentuh lagi, kecuali ada barang, outlet, atau jadwal baru.</p>
+  <ol class="steps"><li class="step" data-role="admin">
+  <div class="step-text">
+    <div class="step-head"><span class="num">1</span><span class="role r-admin">Admin</span></div>
+    <h4>Menetapkan jam tutup dan tanggal kirim</h4>
+    <p>Buka <strong>Atur → Jadwal</strong>. Kartu <strong>Batas waktu umum</strong> mengatur satu jam tutup untuk semua kategori sekaligus (misalnya 20.00) dan kapan barang dibutuhkan (<strong>Besok</strong>, <strong>Hari ini</strong>, atau <strong>Lusa</strong>).</p>
+    <p>Pesanan yang dibuat sore ini umumnya untuk <strong>besok</strong>. Karena itu 'tanggal' pada pesanan selalu berarti <strong>tanggal barang dikirim</strong>, bukan tanggal pesanan dibuat.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/ad18-atur-cutoff.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/ad18-atur-cutoff.webp" alt="Satu jam tutup untuk semua kategori." loading="lazy" width="400" height="860"></span></button><figcaption>Satu jam tutup untuk semua kategori.</figcaption></figure>
+</li>
+<li class="step" data-role="admin">
+  <div class="step-text">
+    <div class="step-head"><span class="num">2</span><span class="role r-admin">Admin</span></div>
+    <h4>Mengatur tiap kategori</h4>
+    <p>Tiap kategori (Belanja Pusat/Pasar, Keringan, Ayam Potong, Buah, Sayur, Bebek &amp; Ayam Kampung) punya pengaturan sendiri: <strong>dikirim lewat</strong> (Aplikasi atau WhatsApp), <strong>penerima di aplikasi</strong> (Tukang Belanja atau Admin Keringan), jam tutup, kapan barang dibutuhkan, dan <strong>outlet yang wajib mengisi</strong>.</p>
+    <p>Inilah yang menentukan jalur sebuah kategori setelah dilepas (lihat Tahap 4).</p>
+    
+    <div class="callout warn"><b>Perhatian</b> Mengubah tanggal kirim menggeser pesanan yang sedang dibuka. Lakukan di luar jam pengisian.</div>
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/ad19-kategori-edit.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/ad19-kategori-edit.webp" alt="Pengaturan satu kategori." loading="lazy" width="400" height="860"></span></button><figcaption>Pengaturan satu kategori.</figcaption></figure>
+</li>
+<li class="step" data-role="admin">
+  <div class="step-text">
+    <div class="step-head"><span class="num">3</span><span class="role r-admin">Admin</span></div>
+    <h4>Mengatur outlet</h4>
+    <p>Di <strong>Atur → Outlet</strong> terdaftar semua outlet beserta kodenya. Outlet yang berada di <strong>tempat</strong> yang sama (misalnya DS, SP, SS di Dolan Sawah) digabung di daftar supplier. Outlet nonaktif tidak wajib mengisi.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/ad20-atur-outlet.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/ad20-atur-outlet.webp" alt="Daftar outlet dan tempatnya." loading="lazy" width="400" height="860"></span></button><figcaption>Daftar outlet dan tempatnya.</figcaption></figure>
+</li>
+<li class="step" data-role="admin">
+  <div class="step-text">
+    <div class="step-head"><span class="num">4</span><span class="role r-admin">Admin</span></div>
+    <h4>Mengisi katalog barang</h4>
+    <p>Katalog adalah daftar barang yang bisa dipilih outlet. Buka tab <strong>Katalog</strong>, cari barang, atau tambah lewat <strong>+ Barang</strong>: nama, kategori, satuan, harga (opsional), dan outlet yang boleh memesan. Hilangkan centang <strong>Aktif</strong> bila barang tidak dijual lagi (lebih aman daripada menghapus).</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/ad11-katalog.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/ad11-katalog.webp" alt="Katalog dengan kolom cari, filter kategori, dan harga." loading="lazy" width="400" height="860"></span></button><figcaption>Katalog dengan kolom cari, filter kategori, dan harga.</figcaption></figure>
+</li>
+<li class="step" data-role="admin">
+  <div class="step-text">
+    <div class="step-head"><span class="num">5</span><span class="role r-admin">Admin</span></div>
+    <h4>Membuat akun untuk semua orang</h4>
+    <p>Di tab <strong>Akun</strong>, admin membuat satu akun untuk setiap orang: Staf Outlet (centang outlet yang boleh diisi), Tukang Belanja, dan Admin Keringan. Username dan password disampaikan langsung ke orangnya. <strong>Hanya Admin yang bisa mengganti password</strong>; pengguna lain tidak bisa mengganti sendiri.</p>
+    <div class="callout tip"><b>Tips</b> Satu staf boleh memegang lebih dari satu outlet. Aplikasi menampilkan pilihan outlet di bagian atas beranda.</div>
+    
+  </div>
+  
+</li></ol></section>
+<section class="phase" id="pesan" data-who="outlet admin">
+  <header class="phase-head">
+    <div class="phase-no">1</div>
+    <div>
+      <h2>📝 Outlet membuat pesanan</h2>
+      <div class="meta"><span class="when">🕒 Sore hari, sebelum jam tutup (standar 20.00)</span> <span class="role r-outlet">Outlet</span> <span class="role r-admin">Admin</span></div>
+    </div>
+  </header>
+  <p class="goal"><b>Tujuan.</b> Setiap outlet menuliskan barang yang dibutuhkan besok, per kategori. Tidak ada kertas dan tidak ada chat WhatsApp.</p>
+  <p class="lead">Satu kategori = satu kali kirim. Untuk tiap kategori outlet punya dua pilihan: <strong>Kirim</strong> (ada barang yang dipesan) atau <strong>Tidak pesan</strong> (sudah dicek, hari ini tidak perlu). Dua-duanya dianggap 'selesai'. Yang berbahaya adalah <strong>lupa</strong>: kategori yang dibiarkan kosong membuat daftar tertahan.</p>
+  <ol class="steps"><li class="step" data-role="outlet">
+  <div class="step-text">
+    <div class="step-head"><span class="num">1</span><span class="role r-outlet">Outlet</span></div>
+    <h4>Masuk dan buka beranda</h4>
+    <p>Buka aplikasi lalu masuk dengan username dan password dari admin. Aplikasi mengingat Anda, jadi tidak perlu masuk tiap hari.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/o01-login.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/o01-login.webp" alt="Layar masuk." loading="lazy" width="400" height="860"></span></button><figcaption>Layar masuk.</figcaption></figure>
+</li>
+<li class="step" data-role="outlet">
+  <div class="step-text">
+    <div class="step-head"><span class="num">2</span><span class="role r-outlet">Outlet</span></div>
+    <h4>Pilih kategori yang akan diisi</h4>
+    <p>Tab <strong>Pesan</strong> menampilkan semua kategori outlet Anda. Tiap kategori punya status: <strong>Belum diisi</strong>, <strong>Draf</strong>, <strong>Terkirim</strong>, <strong>Tidak pesan</strong>, atau <strong>Ditutup</strong>. Kalimat di bawah nama kategori menunjukkan jam tutup terdekat.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/o02-home.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/o02-home.webp" alt="Kategori Sayur masih Belum diisi (bingkai merah). Ketuk untuk membukanya." loading="lazy" width="400" height="860"></span></button><figcaption>Kategori Sayur masih Belum diisi (bingkai merah). Ketuk untuk membukanya.</figcaption></figure>
+</li>
+<li class="step" data-role="outlet">
+  <div class="step-text">
+    <div class="step-head"><span class="num">3</span><span class="role r-outlet">Outlet</span></div>
+    <h4>Pilih barang dengan tombol +</h4>
+    <p>Ketuk <strong>+</strong> pada barang yang dibutuhkan. Barang naik ke atas dengan warna hijau muda dan jumlah awal 1.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/o03-form.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/o03-form.webp" alt="Tanda + menambahkan Wortel ke pesanan." loading="lazy" width="400" height="860"></span></button><figcaption>Tanda + menambahkan Wortel ke pesanan.</figcaption></figure>
+</li>
+<li class="step" data-role="outlet">
+  <div class="step-text">
+    <div class="step-head"><span class="num">4</span><span class="role r-outlet">Outlet</span></div>
+    <h4>Atur jumlah dan satuan</h4>
+    <p>Ubah jumlah dengan tombol <strong>−/+</strong> atau ketik langsung (boleh desimal, mis. 2,5). Pilih <strong>satuan</strong> yang tepat: 2 kg berbeda dengan 2 ikat.</p>
+    
+    <div class="callout warn"><b>Perhatian</b> Salah satuan adalah kesalahan pesanan yang paling sering terjadi. Periksa sebelum mengirim.</div>
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/o04-qty.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/o04-qty.webp" alt="Jumlah dan satuan." loading="lazy" width="400" height="860"></span></button><figcaption>Jumlah dan satuan.</figcaption></figure>
+</li>
+<li class="step" data-role="outlet">
+  <div class="step-text">
+    <div class="step-head"><span class="num">5</span><span class="role r-outlet">Outlet</span></div>
+    <h4>Tulis catatan bila perlu</h4>
+    <p>Ikon <strong>pensil</strong> membuka kolom catatan (ukuran, merek, tingkat kematangan). Catatan ikut terbaca oleh tukang belanja dan supplier.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/o05-note.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/o05-note.webp" alt="Catatan untuk satu barang." loading="lazy" width="400" height="860"></span></button><figcaption>Catatan untuk satu barang.</figcaption></figure>
+</li>
+<li class="step" data-role="outlet">
+  <div class="step-text">
+    <div class="step-head"><span class="num">6</span><span class="role r-outlet">Outlet</span></div>
+    <h4>Cari barang dan tambah barang lain</h4>
+    <p>Ketik sebagian nama di kolom <strong>Cari</strong> untuk menyaring daftar yang panjang. Barang yang tidak ada di daftar? Gulir ke bawah dan ketuk <strong>Tambah barang lain</strong>: tulis nama, jumlah, satuan. Admin bisa memasukkannya ke katalog supaya lain kali mudah dipilih.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/o06-search.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/o06-search.webp" alt="Mengetik 'cabai' menampilkan semua jenis cabai." loading="lazy" width="400" height="860"></span></button><figcaption>Mengetik 'cabai' menampilkan semua jenis cabai.</figcaption></figure>
+</li>
+<li class="step" data-role="outlet">
+  <div class="step-text">
+    <div class="step-head"><span class="num">7</span><span class="role r-outlet">Outlet</span></div>
+    <h4>Periksa dengan filter 'Dipilih'</h4>
+    <p>Ketuk <strong>Dipilih (3)</strong> untuk hanya menampilkan barang yang dipesan, lalu periksa sekali lagi. Draf <strong>tersimpan otomatis</strong>: bila sinyal hilang atau aplikasi tertutup, pesanan tidak hilang dan belum dilihat siapa pun.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/o08-selected.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/o08-selected.webp" alt="Hanya barang yang dipesan yang tampil." loading="lazy" width="400" height="860"></span></button><figcaption>Hanya barang yang dipesan yang tampil.</figcaption></figure>
+</li>
+<li class="step" data-role="outlet">
+  <div class="step-text">
+    <div class="step-head"><span class="num">8</span><span class="role r-outlet">Outlet</span></div>
+    <h4>Kirim</h4>
+    <p>Ketuk <strong>Kirim</strong>, lalu <strong>Kirim</strong> sekali lagi pada konfirmasi. Pesanan baru masuk setelah statusnya berubah menjadi <strong>Terkirim</strong>.</p>
+    <p>Bila tidak ada yang perlu dipesan, ketuk <strong>Tidak pesan</strong>. Di beranda juga ada tombol <strong>Tidak ada pesanan untuk sisanya</strong> untuk menandai semua kategori kosong sekaligus.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/o09-confirm.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/o09-confirm.webp" alt="Konfirmasi sebelum kirim." loading="lazy" width="400" height="860"></span></button><figcaption>Konfirmasi sebelum kirim.</figcaption></figure>
+</li>
+<li class="step" data-role="outlet">
+  <div class="step-text">
+    <div class="step-head"><span class="num">9</span><span class="role r-outlet">Outlet</span></div>
+    <h4>Masih boleh diubah selama daftar belum dilepas</h4>
+    <p>Pesanan yang sudah terkirim bisa dibuka lagi lewat <strong>Ubah pesanan</strong>, diperbaiki, lalu dikirim ulang, <strong>selama belum semua outlet selesai dan jam tutup belum lewat</strong> (artinya daftar belum dilepas, lihat Tahap 2). Keterangan 'Terkirim. 7/8 outlet sudah mengisi' memberi tahu kemajuan.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/o10-sent.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/o10-sent.webp" alt="Pesanan terkirim; tombol Ubah pesanan masih ada." loading="lazy" width="400" height="860"></span></button><figcaption>Pesanan terkirim; tombol Ubah pesanan masih ada.</figcaption></figure>
+</li>
+<li class="step" data-role="outlet">
+  <div class="step-text">
+    <div class="step-head"><span class="num">10</span><span class="role r-outlet">Outlet</span></div>
+    <h4>Beranda menunjukkan hasilnya</h4>
+    <p>Kategori berubah menjadi <strong>Terkirim</strong> dan angka kemajuan bertambah. Setelah semua kategori beres muncul 'Semua kategori sudah diisi. Terima kasih!'.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/o11-home-sent.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/o11-home-sent.webp" alt="Kategori Sayur kini Terkirim." loading="lazy" width="400" height="860"></span></button><figcaption>Kategori Sayur kini Terkirim.</figcaption></figure>
+</li></ol><div class="notes"><div class="note"><b>Simpan otomatis</b><span>Draf tersimpan di perangkat dan di server. Aman bila aplikasi tertutup atau sinyal putus.</span></div><div class="note"><b>Dua perangkat</b><span>Bila akun yang sama dibuka di dua ponsel, aplikasi mencegah satu perangkat menimpa pesanan yang lebih baru dari perangkat lain.</span></div><div class="note"><b>Barang nonaktif</b><span>Barang yang sudah dinonaktifkan admin tidak bisa dipesan; aplikasi menyebut nama barangnya agar jelas.</span></div></div></section>
+<section class="phase" id="lepas" data-who="admin sistem">
+  <header class="phase-head">
+    <div class="phase-no">2</div>
+    <div>
+      <h2>🔓 Daftar dilepas</h2>
+      <div class="meta"><span class="when">🕒 Saat semua outlet selesai, atau jam tutup lewat</span> <span class="role r-admin">Admin</span> <span class="role r-sistem">Otomatis</span></div>
+    </div>
+  </header>
+  <p class="goal"><b>Tujuan.</b> Menggabungkan pesanan semua outlet menjadi satu daftar yang sudah final dan menyerahkannya ke orang yang mengerjakan. Sebelum 'dilepas', daftar hanya pratinjau.</p>
+  <p class="lead">Setiap kategori punya satu daftar (disebut <strong>batch</strong>). Daftar itu <strong>dilepas</strong> lewat salah satu dari tiga cara. Cara mana pun yang terjadi lebih dulu yang berlaku.</p>
+  <div class="diagram" role="group" aria-label="Tiga cara daftar dilepas">
+  <div class="dg-title">Daftar dilepas bila salah satu terjadi lebih dulu</div>
+  <div class="dg-or">
+    <div class="dg-box"><b>1. Semua outlet selesai</b><span>Setiap outlet wajib sudah <em>Kirim</em> atau <em>Tidak pesan</em>.</span></div>
+    <div class="dg-op">ATAU</div>
+    <div class="dg-box"><b>2. Jam tutup terlewati</b><span>Otomatis, walau ada outlet yang belum mengisi.</span></div>
+    <div class="dg-op">ATAU</div>
+    <div class="dg-box"><b>3. Admin melepas manual</b><span>Tombol <em>Lepas sekarang</em>. Bisa ditarik kembali selama belum dikirim ke supplier.</span></div>
+  </div>
+  <div class="dg-arrow">▼</div>
+  <div class="dg-box big"><b>DAFTAR DILEPAS</b><span>Daftar menjadi final. Outlet yang belum mengisi hanya bisa lewat <em>Susulan</em>.</span></div>
+</div><ol class="steps"><li class="step" data-role="admin">
+  <div class="step-text">
+    <div class="step-head"><span class="num">1</span><span class="role r-admin">Admin</span></div>
+    <h4>Memantau siapa yang sudah mengisi</h4>
+    <p>Buka <strong>Pantau → Pengisian</strong>. Tabel menunjukkan baris = outlet dan kolom = kategori. Hijau berceklis <strong>Terkirim</strong>, abu-abu strip <strong>Tidak pesan</strong>, biru <strong>Draf</strong>, oranye jam <strong>Belum</strong>.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/ad02-pantau-grid.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/ad02-pantau-grid.webp" alt="Panarama Resto belum mengisi Sayur (jam oranye)." loading="lazy" width="400" height="860"></span></button><figcaption>Panarama Resto belum mengisi Sayur (jam oranye).</figcaption></figure>
+</li>
+<li class="step" data-role="admin">
+  <div class="step-text">
+    <div class="step-head"><span class="num">2</span><span class="role r-admin">Admin</span></div>
+    <h4>Mengingatkan yang belum mengisi</h4>
+    <p>Ketuk <strong>Ingatkan yang belum</strong>. Notifikasi dikirim ke outlet yang belum mengisi, bila perangkat mereka sudah mengaktifkan notifikasi. Bila semua sudah mengisi, aplikasi menjawab bahwa tidak ada yang perlu diingatkan.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/ad03-ingatkan.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/ad03-ingatkan.webp" alt="Tombol Ingatkan yang belum." loading="lazy" width="400" height="860"></span></button><figcaption>Tombol Ingatkan yang belum.</figcaption></figure>
+</li>
+<li class="step" data-role="admin">
+  <div class="step-text">
+    <div class="step-head"><span class="num">3</span><span class="role r-admin">Admin</span></div>
+    <h4>Melihat daftar yang masih menunggu</h4>
+    <p>Buka kartu kategori. Selama belum lengkap, tampil kotak <strong>Menunggu 1 dari 8 outlet</strong> beserta outlet yang sudah dan belum selesai.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/ad05-batch-menunggu.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/ad05-batch-menunggu.webp" alt="Rincian outlet yang sudah dan belum mengisi." loading="lazy" width="400" height="860"></span></button><figcaption>Rincian outlet yang sudah dan belum mengisi.</figcaption></figure>
+</li>
+<li class="step" data-role="sistem">
+  <div class="step-text">
+    <div class="step-head"><span class="num">4</span><span class="role r-sistem">Otomatis</span></div>
+    <h4>Pratinjau: boleh dilihat, jangan dikerjakan</h4>
+    <p>Orang yang mengerjakan (tukang belanja, admin keringan) sudah bisa membuka daftar, tetapi bertanda <strong>Pratinjau sementara</strong> dan tombol kirim WhatsApp belum aktif. Daftar masih bisa bertambah bila ada outlet yang belum mengisi.</p>
+    
+    <div class="callout warn"><b>Perhatian</b> Jangan belanja atau kirim ke supplier dari pratinjau.</div>
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/b09-wa-preview.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/b09-wa-preview.webp" alt="Kotak oranye: masih menunggu outlet." loading="lazy" width="400" height="860"></span></button><figcaption>Kotak oranye: masih menunggu outlet.</figcaption></figure>
+</li>
+<li class="step" data-role="admin">
+  <div class="step-text">
+    <div class="step-head"><span class="num">5</span><span class="role r-admin">Admin</span></div>
+    <h4>Melepas manual bila perlu</h4>
+    <p>Bila tidak mau menunggu (misalnya satu outlet jelas tidak memesan), ketuk <strong>Lepas sekarang (walau belum lengkap)</strong>. Aplikasi menyebut outlet yang belum mengisi, dan setelah dilepas mereka <strong>hanya bisa lewat Susulan</strong>. Pelepasan bisa <strong>ditarik kembali</strong> selama belum dikirim ke supplier dan masih ada outlet yang belum selesai.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/ad07-lepas-dialog.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/ad07-lepas-dialog.webp" alt="Konfirmasi pelepasan." loading="lazy" width="400" height="860"></span></button><figcaption>Konfirmasi pelepasan.</figcaption></figure>
+</li>
+<li class="step" data-role="sistem">
+  <div class="step-text">
+    <div class="step-head"><span class="num">6</span><span class="role r-sistem">Otomatis</span></div>
+    <h4>Daftar final</h4>
+    <p>Setelah dilepas, daftar menjadi final: barang semua outlet dijumlahkan per barang dan satuan, lengkap dengan rincian per outlet. Statusnya berubah menjadi <strong>Siap</strong>.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/ad25-batch-siap.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/ad25-batch-siap.webp" alt="Daftar belanja yang sudah final." loading="lazy" width="400" height="860"></span></button><figcaption>Daftar belanja yang sudah final.</figcaption></figure>
+</li></ol><div class="notes"><div class="note"><b>Setelah dilepas</b><span>Outlet tidak bisa lagi mengubah pesanan biasa. Menambah hanya lewat <strong>Susulan</strong> (Tahap 3).</span></div><div class="note"><b>Koreksi oleh admin</b><span>Admin bisa mengoreksi pesanan satu outlet lewat tombol <strong>Koreksi</strong> di daftar per outlet, mis. bila outlet salah isi dan tidak sempat memperbaiki.</span></div><div class="note"><b>Tanggal kirim terkunci</b><span>Mengubah tanggal kirim ditolak bila sudah ada pesanan terkirim, kecuali admin menegaskannya.</span></div></div></section>
+<section class="phase" id="susulan" data-who="outlet admin">
+  <header class="phase-head">
+    <div class="phase-no">3</div>
+    <div>
+      <h2>➕ Susulan: tambahan setelah ditutup</h2>
+      <div class="meta"><span class="when">🕒 Setelah daftar dilepas, bila ada yang terlewat</span> <span class="role r-outlet">Outlet</span> <span class="role r-admin">Admin</span></div>
+    </div>
+  </header>
+  <p class="goal"><b>Tujuan.</b> Memberi jalan bagi outlet yang lupa atau butuh tambahan, tanpa mengacaukan daftar yang sudah berjalan.</p>
+  <p class="lead">Susulan <strong>hanya menambah</strong> barang, tidak bisa mengurangi atau mengubah pesanan yang sudah ditutup, dan <strong>baru dikerjakan setelah disetujui Admin</strong>.</p>
+  <ol class="steps"><li class="step" data-role="outlet">
+  <div class="step-text">
+    <div class="step-head"><span class="num">1</span><span class="role r-outlet">Outlet</span></div>
+    <h4>Mengenali pesanan yang sudah ditutup</h4>
+    <p>Kategori yang sudah dilepas berlabel merah <strong>Ditutup</strong>. Isi pesanan tetap bisa dilihat tetapi tidak bisa diubah.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/o12-closed.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/o12-closed.webp" alt="Label Ditutup di pojok kanan atas." loading="lazy" width="400" height="860"></span></button><figcaption>Label Ditutup di pojok kanan atas.</figcaption></figure>
+</li>
+<li class="step" data-role="outlet">
+  <div class="step-text">
+    <div class="step-head"><span class="num">2</span><span class="role r-outlet">Outlet</span></div>
+    <h4>Ketuk Kirim susulan dan pilih barang</h4>
+    <p>Ketuk tombol oranye <strong>Kirim susulan</strong>. Caranya sama seperti pesanan biasa: <strong>+</strong>, jumlah, satuan, catatan. Tombol oranye mengingatkan bahwa ini susulan.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/o13c-susulan-isi.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/o13c-susulan-isi.webp" alt="Micin 2 kg ditambahkan sebagai susulan." loading="lazy" width="400" height="860"></span></button><figcaption>Micin 2 kg ditambahkan sebagai susulan.</figcaption></figure>
+</li>
+<li class="step" data-role="outlet">
+  <div class="step-text">
+    <div class="step-head"><span class="num">3</span><span class="role r-outlet">Outlet</span></div>
+    <h4>Kirim dan tunggu keputusan</h4>
+    <p>Ketuk <strong>Kirim susulan</strong> lalu <strong>Kirim</strong>. Susulan yang belum diputuskan masih bisa dibatalkan lewat <strong>Batalkan susulan</strong>.</p>
+    <div class="callout tip"><b>Tips</b> Untuk barang mendesak, hubungi admin langsung supaya segera diputuskan.</div>
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/o13d-susulan-konfirmasi.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/o13d-susulan-konfirmasi.webp" alt="Konfirmasi susulan." loading="lazy" width="400" height="860"></span></button><figcaption>Konfirmasi susulan.</figcaption></figure>
+</li>
+<li class="step" data-role="admin">
+  <div class="step-text">
+    <div class="step-head"><span class="num">4</span><span class="role r-admin">Admin</span></div>
+    <h4>Admin menyetujui atau menolak</h4>
+    <p>Di tab <strong>Susulan</strong> (angka di lonceng ikut bertambah) admin melihat outlet pengirim, kategori, tanggal kirim, dan barangnya. <strong>Setujui</strong>: barang langsung bergabung ke daftar tukang belanja atau gudang. <strong>Tolak</strong>: barang tidak dipesan dan outlet melihat bahwa susulannya ditolak.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/ad09-susulan-setujui.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/ad09-susulan-setujui.webp" alt="Tombol Setujui (hijau) dan Tolak (merah)." loading="lazy" width="400" height="860"></span></button><figcaption>Tombol Setujui (hijau) dan Tolak (merah).</figcaption></figure>
+</li></ol><div class="notes"><div class="note"><b>Kategori WhatsApp yang sudah dikirim</b><span>Bila susulan disetujui setelah daftar WhatsApp terkirim ke supplier, tukang belanja diberi tahu dan pesan WhatsApp berikutnya hanya memuat <strong>tambahannya</strong>, bukan seluruh daftar lagi.</span></div><div class="note"><b>Putuskan lebih awal</b><span>Susulan sebaiknya diputuskan sebelum tukang belanja berangkat atau sebelum supplier mengemas barang.</span></div></div></section>
+<section class="phase" id="kerja" data-who="belanja keringan supplier">
+  <header class="phase-head">
+    <div class="phase-no">4</div>
+    <div>
+      <h2>🛒 Daftar dikerjakan: tiga jalur</h2>
+      <div class="meta"><span class="when">🕒 Malam hari sampai pagi sebelum barang dibutuhkan</span> <span class="role r-belanja">Tukang Belanja</span> <span class="role r-keringan">Gudang Keringan</span> <span class="role r-supplier">Supplier</span></div>
+    </div>
+  </header>
+  <p class="goal"><b>Tujuan.</b> Mengubah daftar final menjadi barang nyata. Jalur ditentukan oleh pengaturan kategori (Tahap 0).</p>
+  <p class="lead">Ada tiga jalur. Pesanan outlet <strong>sama</strong> untuk semuanya; yang berbeda hanya siapa yang mengerjakan.</p>
+  <div class="diagram" role="group" aria-label="Tiga jalur pengerjaan daftar">
+  <div class="dg-title">Daftar sudah dilepas. Siapa yang mengerjakan? Tergantung pengaturan kategori</div>
+  <div class="dg-three">
+    <a class="dg-box lane l-belanja" href="#pasar"><b>🧺 A. Pasar</b><span>Kategori <em>Belanja Pusat (Pasar)</em></span><span class="who">Tukang Belanja membeli sendiri dan mencatat hasil serta harga.</span></a>
+    <a class="dg-box lane l-wa" href="#wa"><b>💬 B. WhatsApp</b><span>Ayam Potong, Buah, Sayur, Bebek &amp; Ayam Kampung</span><span class="who">Tukang Belanja meneruskan daftar ke grup supplier; supplier mengantar.</span></a>
+    <a class="dg-box lane l-keringan" href="#keringan"><b>📦 C. Keringan</b><span>Kategori <em>Keringan</em></span><span class="who">Admin Keringan menyiapkan dari gudang; stok berkurang otomatis.</span></a>
+  </div>
+  <div class="dg-arrow">▼ &nbsp; semua jalur bertemu di &nbsp; ▼</div>
+  <div class="dg-box big"><b>Barang tiba di outlet → Tahap 5</b></div>
+</div><div class="sub" id="pasar"><h3>🧺 Jalur A: Belanja ke pasar</h3><p class="lead">Untuk kategori <strong>Belanja Pusat (Pasar)</strong>. Tukang belanja membeli sendiri dan mencatat apa yang sungguh didapat dan berapa harganya. Layar sengaja dijaga tetap menyala selama daftar terbuka.</p><ol class="steps"><li class="step" data-role="belanja">
+  <div class="step-text">
+    <div class="step-head"><span class="num">1</span><span class="role r-belanja">Tukang Belanja</span></div>
+    <h4>Mulai dari Ringkasan</h4>
+    <p>Tab <strong>Ringkasan</strong> menampilkan satu kartu per kategori: tanggal, jumlah jenis barang dari berapa outlet, dan status (<strong>Menunggu N outlet</strong>, <strong>Siap dibelanjakan</strong>, <strong>Siap dikirim WA</strong>, <strong>Sudah dikirim WA</strong>). Ketuk kartunya untuk membuka daftar.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/b01-ringkasan.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/b01-ringkasan.webp" alt="Kartu Belanja ke pasar dan kartu supplier WhatsApp." loading="lazy" width="400" height="860"></span></button><figcaption>Kartu Belanja ke pasar dan kartu supplier WhatsApp.</figcaption></figure>
+</li>
+<li class="step" data-role="belanja">
+  <div class="step-text">
+    <div class="step-head"><span class="num">2</span><span class="role r-belanja">Tukang Belanja</span></div>
+    <h4>Baca daftar belanja</h4>
+    <p>Tab <strong>Pasar</strong> memuat daftar barang: nama, rincian per outlet (mis. 'Dolan Sawah 5 · Soto Pagi 1,5'), dan <strong>jumlah total</strong> di kanan. Tombol <strong>Gabungan</strong> menampilkan satu baris per barang (praktis di pasar); <strong>Per outlet</strong> mengelompokkan per outlet (praktis saat menyusun paket).</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/b03-pasar-atas.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/b03-pasar-atas.webp" alt="Kartu kategori, pilihan tanggal, dan jumlah barang." loading="lazy" width="400" height="860"></span></button><figcaption>Kartu kategori, pilihan tanggal, dan jumlah barang.</figcaption></figure>
+</li>
+<li class="step" data-role="belanja">
+  <div class="step-text">
+    <div class="step-head"><span class="num">3</span><span class="role r-belanja">Tukang Belanja</span></div>
+    <h4>Dapat sebanyak pesanan? Ketuk centang</h4>
+    <p>Bila barang didapat sebanyak yang dipesan, cukup ketuk <strong>kotak centang</strong> di kiri. Barang dicoret dan tercatat 'dibeli sebanyak pesanan'.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/b05-centang.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/b05-centang.webp" alt="Kotak centang di baris Kencur." loading="lazy" width="400" height="860"></span></button><figcaption>Kotak centang di baris Kencur.</figcaption></figure>
+</li>
+<li class="step" data-role="belanja">
+  <div class="step-text">
+    <div class="step-head"><span class="num">4</span><span class="role r-belanja">Tukang Belanja</span></div>
+    <h4>Hasilnya berbeda? Catat rinci</h4>
+    <p>Ketuk <strong>nama barang</strong> atau ikon <strong>pensil</strong>. Pilih hasil belanja: <strong>Dapat sesuai</strong>, <strong>Sebagian</strong> (isi jumlah yang didapat), <strong>Ganti barang</strong> (tulis penggantinya di catatan), atau <strong>Tidak ada</strong> (habis di pasar).</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/b06-sheet.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/b06-sheet.webp" alt="Lembar Catat pembelian." loading="lazy" width="400" height="860"></span></button><figcaption>Lembar Catat pembelian.</figcaption></figure>
+</li>
+<li class="step" data-role="belanja">
+  <div class="step-text">
+    <div class="step-head"><span class="num">5</span><span class="role r-belanja">Tukang Belanja</span></div>
+    <h4>Isi jumlah, harga total, dan catatan</h4>
+    <p>Isi <strong>Jumlah dibeli</strong> dan <strong>Harga total</strong> (rupiah yang dibayar untuk barang itu, bukan harga satuan). Aplikasi menghitung harga per satuan otomatis. Harga boleh dikosongkan.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/b07-sheet-harga.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/b07-sheet-harga.webp" alt="Rp 63.000 untuk 4,5 kg terhitung Rp 14.000 per kg." loading="lazy" width="400" height="860"></span></button><figcaption>Rp 63.000 untuk 4,5 kg terhitung Rp 14.000 per kg.</figcaption></figure>
+</li>
+<li class="step" data-role="belanja">
+  <div class="step-text">
+    <div class="step-head"><span class="num">6</span><span class="role r-belanja">Tukang Belanja</span></div>
+    <h4>Hasil tersimpan dan terlihat admin</h4>
+    <p>Baris barang menampilkan status berwarna, jumlah, harga, dan catatan. Di ujung daftar kotak <strong>Biaya nyata tercatat</strong> menjumlahkan semua harga yang diisi. Semuanya muncul di <strong>Realisasi</strong> milik admin (Tahap 6).</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/b09-tersimpan.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/b09-tersimpan.webp" alt="Kencur dibeli 4,5 kg dari 5 kg, sisanya habis di pasar." loading="lazy" width="400" height="860"></span></button><figcaption>Kencur dibeli 4,5 kg dari 5 kg, sisanya habis di pasar.</figcaption></figure>
+</li></ol></div><div class="sub" id="wa"><h3>💬 Jalur B: Diteruskan ke supplier lewat WhatsApp</h3><p class="lead">Untuk kategori yang dikirim lewat <strong>WhatsApp</strong>: Ayam Potong, Buah, Sayur, Bebek &amp; Ayam Kampung. Tukang belanja tidak membeli sendiri; ia meneruskan daftar final ke grup supplier, dan supplier yang mengantar.</p><ol class="steps"><li class="step" data-role="belanja">
+  <div class="step-text">
+    <div class="step-head"><span class="num">1</span><span class="role r-belanja">Tukang Belanja</span></div>
+    <h4>Pilih kategori di tab WhatsApp</h4>
+    <p>Pindah antar kategori lewat deretan tombol di atas. Status <strong>Siap</strong> berarti daftar lengkap dan boleh dikirim; selama masih pratinjau, tombol kirim tidak aktif.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/b13-wa-atas.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/b13-wa-atas.webp" alt="Kategori Buah siap dikirim." loading="lazy" width="400" height="860"></span></button><figcaption>Kategori Buah siap dikirim.</figcaption></figure>
+</li>
+<li class="step" data-role="belanja">
+  <div class="step-text">
+    <div class="step-head"><span class="num">2</span><span class="role r-belanja">Tukang Belanja</span></div>
+    <h4>Pilih format pesan</h4>
+    <p><strong>Per outlet + total</strong>: rincian tiap outlet lalu rekap total (cocok bila supplier mengemas per outlet). <strong>Total saja</strong>: hanya rekap barang (lebih singkat); catatan outlet tetap ikut.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/b16-wa-format.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/b16-wa-format.webp" alt="Dua pilihan format." loading="lazy" width="400" height="860"></span></button><figcaption>Dua pilihan format.</figcaption></figure>
+</li>
+<li class="step" data-role="belanja">
+  <div class="step-text">
+    <div class="step-head"><span class="num">3</span><span class="role r-belanja">Tukang Belanja</span></div>
+    <h4>Baca teks sebelum dikirim</h4>
+    <p>Ketuk <strong>Lihat teks</strong> untuk membaca pesan persis seperti yang akan terkirim. Periksa nama barang dan jumlah. Aplikasi juga memperingatkan bila pesan dikirim melewati tengah malam sehingga tanggalnya bisa membingungkan supplier.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/b14-wa-teks.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/b14-wa-teks.webp" alt="Teks pesan." loading="lazy" width="400" height="860"></span></button><figcaption>Teks pesan.</figcaption></figure>
+</li>
+<li class="step" data-role="belanja">
+  <div class="step-text">
+    <div class="step-head"><span class="num">4</span><span class="role r-belanja">Tukang Belanja</span></div>
+    <h4>Kirim ke WhatsApp</h4>
+    <p>Ketuk <strong>Kirim ke WhatsApp</strong>. WhatsApp terbuka dengan pesan sudah terisi; <strong>pilih grup supplier</strong> lalu tekan kirim. Setelah itu aplikasi menanyakan konfirmasi dan menandai kategori <strong>Sudah dikirim WA</strong> lengkap dengan jam dan nama pengirim.</p>
+    
+    <div class="callout warn"><b>Perhatian</b> Salah grup? Hapus pesan di WhatsApp, lalu ketuk 'Kirim lagi ke WhatsApp' dan pilih grup yang benar.</div>
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/b15-wa-kirim.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/b15-wa-kirim.webp" alt="Tombol hijau Kirim ke WhatsApp." loading="lazy" width="400" height="860"></span></button><figcaption>Tombol hijau Kirim ke WhatsApp.</figcaption></figure>
+</li>
+<li class="step" data-role="supplier">
+  <div class="step-text">
+    <div class="step-head"><span class="num">5</span><span class="role r-supplier">Supplier</span></div>
+    <h4>Supplier mengemas dan mengantar</h4>
+    <p>Bagian ini terjadi <strong>di luar aplikasi</strong>: supplier membaca pesan di grup, menyiapkan barang, dan mengantar ke outlet pada tanggal kirim.</p>
+    
+    
+  </div>
+  
+</li>
+<li class="step" data-role="belanja">
+  <div class="step-text">
+    <div class="step-head"><span class="num">6</span><span class="role r-belanja">Tukang Belanja</span></div>
+    <h4>Pastikan semuanya terkirim</h4>
+    <p>Kembali ke <strong>Ringkasan</strong> untuk memastikan semua kategori WhatsApp sudah <strong>Sudah dikirim WA</strong>.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/b12-ringkasan-wa.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/b12-ringkasan-wa.webp" alt="Status kiriman tiap kategori." loading="lazy" width="400" height="860"></span></button><figcaption>Status kiriman tiap kategori.</figcaption></figure>
+</li></ol></div><div class="sub" id="keringan"><h3>📦 Jalur C: Barang keringan dari gudang</h3><p class="lead">Untuk kategori <strong>Keringan</strong> (barang keringan yang disimpan di gudang). Barang tidak dibeli melainkan <strong>diambil dari gudang</strong>, jadi Admin Keringan menyiapkannya per outlet dan stok berkurang otomatis.</p><ol class="steps"><li class="step" data-role="keringan">
+  <div class="step-text">
+    <div class="step-head"><span class="num">1</span><span class="role r-keringan">Gudang Keringan</span></div>
+    <h4>Buka Pesanan, pilih 'Siapkan per outlet'</h4>
+    <p>Tab <strong>Pesanan</strong> menampilkan barang keringan yang dipesan. <strong>Gabungan</strong> menunjukkan total tiap barang; <strong>Siapkan per outlet</strong> adalah layar kerja utama, satu kotak per outlet dengan kemajuan (mis. <strong>0/4 disiapkan</strong>). Di atas ada pintasan ringkasan stok gudang.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/k11-pesanan-atas.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/k11-pesanan-atas.webp" alt="Tab Pesanan dengan ringkasan stok gudang." loading="lazy" width="400" height="860"></span></button><figcaption>Tab Pesanan dengan ringkasan stok gudang.</figcaption></figure>
+</li>
+<li class="step" data-role="keringan">
+  <div class="step-text">
+    <div class="step-head"><span class="num">2</span><span class="role r-keringan">Gudang Keringan</span></div>
+    <h4>Tautkan barang pesanan dengan barang stok (pertama kali)</h4>
+    <p>Daftar pesanan dan daftar stok gudang tidak selalu bernama atau berasatuan sama. Pada pemberian <strong>pertama</strong>, pilih barang stok yang dimaksud (aplikasi menebak dan menandai 'dipilih otomatis'; periksa dulu). Pilihan <strong>diingat</strong> untuk semua outlet dan tanggal berikutnya. Barang yang memang tidak dilacak dipilih sebagai <strong>Tanpa stok</strong>.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/k17-pilih-stok.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/k17-pilih-stok.webp" alt="Kolom 'Barang di stok gudang' masih kosong: pilih barang yang benar." loading="lazy" width="400" height="860"></span></button><figcaption>Kolom 'Barang di stok gudang' masih kosong: pilih barang yang benar.</figcaption></figure>
+</li>
+<li class="step" data-role="keringan">
+  <div class="step-text">
+    <div class="step-head"><span class="num">3</span><span class="role r-keringan">Gudang Keringan</span></div>
+    <h4>Catat jumlah yang diberikan</h4>
+    <p>Ketuk pensil, isi <strong>jumlah diberikan ke outlet</strong>. Aplikasi langsung menandai <strong>Sesuai pesanan</strong>, <strong>Kurang</strong>, <strong>Lebih</strong>, atau <strong>Tidak diberi</strong>, lalu menghitung stok, mis. 'Stok 20 kg → sisa 19 kg'. Isi 0 bila barang tidak diberikan.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/k15-sheet-kurang.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/k15-sheet-kurang.webp" alt="Dipesan 1,5 kg, diberikan 1 kg: Kurang. Stok 20 kg menjadi 19 kg." loading="lazy" width="400" height="860"></span></button><figcaption>Dipesan 1,5 kg, diberikan 1 kg: Kurang. Stok 20 kg menjadi 19 kg.</figcaption></figure>
+</li>
+<li class="step" data-role="keringan">
+  <div class="step-text">
+    <div class="step-head"><span class="num">4</span><span class="role r-keringan">Gudang Keringan</span></div>
+    <h4>Centang cepat bila sesuai</h4>
+    <p>Sesudah tertaut, barang yang sama untuk outlet lain cukup dicentang. Aplikasi memberi sesuai jumlah pesanan dan memotong stok bila <strong>tautannya jelas, satuannya cocok, dan stoknya cukup</strong>. Bila salah satunya tidak terpenuhi, barang hanya tercentang dengan keterangan 'stok belum dicatat' dan dapat dicatat ke stok belakangan lewat tombol <strong>Catat ke stok</strong>.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/k20-centang-cepat.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/k20-centang-cepat.webp" alt="Centang di baris Bawang Putih (barang sudah tertaut)." loading="lazy" width="400" height="860"></span></button><figcaption>Centang di baris Bawang Putih (barang sudah tertaut).</figcaption></figure>
+</li>
+<li class="step" data-role="keringan">
+  <div class="step-text">
+    <div class="step-head"><span class="num">5</span><span class="role r-keringan">Gudang Keringan</span></div>
+    <h4>Satuan berbeda dan barang pengganti</h4>
+    <p>Bila satuan pesanan lain dari satuan stok (pesan 'dus', stok 'pack'), aplikasi bertanya: <strong>'1 dus berapa pack?'</strong> atau 'mana satuan yang benar?'. Jawaban diingat, dan bila satuan pesanan memang keliru, outlet menerima <strong>banner 'Ganti satuan pesanan'</strong>. Bila barang utama kurang, sisanya dapat otomatis diambil dari <strong>barang pengganti</strong> (mis. santan Sasa habis, diganti Kara).</p>
+    
+    
+  </div>
+  
+</li>
+<li class="step" data-role="keringan">
+  <div class="step-text">
+    <div class="step-head"><span class="num">6</span><span class="role r-keringan">Gudang Keringan</span></div>
+    <h4>Membatalkan pemberian</h4>
+    <p>Salah centang? Ketuk lagi. Aplikasi menyebut <strong>berapa stok yang akan dikembalikan</strong>; ketuk <strong>Batalkan</strong> untuk menarik pemberian dan mengembalikan stok.</p>
+    
+    <div class="callout warn"><b>Perhatian</b> Bila stok tidak cukup, penyimpanan ditolak dan tidak ada yang berubah. Lakukan Barang masuk atau Opname dulu.</div>
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/k22-batal-dialog.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/k22-batal-dialog.webp" alt="Konfirmasi pembatalan: stok kembali 4 kg." loading="lazy" width="400" height="860"></span></button><figcaption>Konfirmasi pembatalan: stok kembali 4 kg.</figcaption></figure>
+</li>
+<li class="step" data-role="keringan">
+  <div class="step-text">
+    <div class="step-head"><span class="num">7</span><span class="role r-keringan">Gudang Keringan</span></div>
+    <h4>Kartu Kekurangan</h4>
+    <p>Barang yang tidak terpenuhi dari gudang dikumpulkan di kartu <strong>Kekurangan</strong> dan bisa disalin (<strong>Salin</strong>) untuk diteruskan atau ditindaklanjuti.</p>
+    
+    
+  </div>
+  
+</li></ol><h4 class="after-h">Pekerjaan penunjang</h4><ol class="steps"><li class="step" data-role="keringan">
+  <div class="step-text">
+    <div class="step-head"><span class="num">1</span><span class="role r-keringan">Gudang Keringan</span></div>
+    <h4>Kelola stok: barang masuk, keluar, opname</h4>
+    <p>Menu <strong>Stok gudang</strong> punya tiga tombol aksi. <strong>Barang masuk</strong> menambah stok saat gudang menerima barang dari supplier. <strong>Keluar ke outlet</strong> hanya untuk barang yang diambil di luar pesanan. <strong>Opname</strong> mencocokkan angka sistem dengan hitungan fisik; selisih besar atau opname malam hari ditandai tidak wajar dan dilihat admin. Salah catat? Batalkan dari tab <strong>Riwayat</strong> (transaksi sendiri, maksimal 24 jam).</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/k0x-ringkasan.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/k0x-ringkasan.webp" alt="Ringkasan stok: menipis, habis, minus." loading="lazy" width="400" height="860"></span></button><figcaption>Ringkasan stok: menipis, habis, minus.</figcaption></figure>
+</li></ol></div></section>
+<section class="phase" id="terima" data-who="outlet">
+  <header class="phase-head">
+    <div class="phase-no">5</div>
+    <div>
+      <h2>📬 Barang tiba: outlet mencatat penerimaan</h2>
+      <div class="meta"><span class="when">🕒 Pada tanggal kirim, begitu barang sampai</span> <span class="role r-outlet">Outlet</span></div>
+    </div>
+  </header>
+  <p class="goal"><b>Tujuan.</b> Mencatat dengan jujur apa yang sungguh diterima. Catatan inilah yang membuat admin tahu barang mana yang kurang, rusak, atau berlebih.</p>
+  <p class="lead">Dikerjakan dari tab <strong>Barang datang</strong> di akun outlet. Prinsipnya: yang <strong>sesuai</strong> cukup dicentang (cepat), yang <strong>bermasalah</strong> dicatat satu per satu.</p>
+  <ol class="steps"><li class="step" data-role="outlet">
+  <div class="step-text">
+    <div class="step-head"><span class="num">1</span><span class="role r-outlet">Outlet</span></div>
+    <h4>Pilih tanggal kirim</h4>
+    <p>Buka <strong>Barang datang</strong>. Pesanan yang Anda buat kemarin sore biasanya tiba <strong>hari ini</strong>. Pakai <strong>Kemarin / Hari ini / Besok</strong> atau panah untuk berpindah tanggal.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/o14-terima-tanggal.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/o14-terima-tanggal.webp" alt="Pilihan tanggal di tab Barang datang." loading="lazy" width="400" height="860"></span></button><figcaption>Pilihan tanggal di tab Barang datang.</figcaption></figure>
+</li>
+<li class="step" data-role="outlet">
+  <div class="step-text">
+    <div class="step-head"><span class="num">2</span><span class="role r-outlet">Outlet</span></div>
+    <h4>Pilih kategori yang barangnya sudah tiba</h4>
+    <p>Layar menunjukkan kemajuan (mis. 4/6 kategori) dan status tiap kategori: <strong>Belum dicatat</strong>, <strong>Sesuai</strong>, atau <strong>Ada selisih</strong>.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/o15-terima-home.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/o15-terima-home.webp" alt="Keringan dan Buah masih Belum dicatat." loading="lazy" width="400" height="860"></span></button><figcaption>Keringan dan Buah masih Belum dicatat.</figcaption></figure>
+</li>
+<li class="step" data-role="outlet">
+  <div class="step-text">
+    <div class="step-head"><span class="num">3</span><span class="role r-outlet">Outlet</span></div>
+    <h4>Centang yang sesuai</h4>
+    <p>Tiap baris menampilkan jumlah yang <strong>dipesan</strong>. Bila yang datang sama persis, ketuk <strong>centang</strong> di kanan baris.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/o16-terima-list.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/o16-terima-list.webp" alt="Centang = diterima sesuai pesanan." loading="lazy" width="400" height="860"></span></button><figcaption>Centang = diterima sesuai pesanan.</figcaption></figure>
+</li>
+<li class="step" data-role="outlet">
+  <div class="step-text">
+    <div class="step-head"><span class="num">4</span><span class="role r-outlet">Outlet</span></div>
+    <h4>Catat yang kurang atau lebih</h4>
+    <p>Ketuk <strong>nama barang</strong> (bukan centangnya), lalu ubah <strong>Jumlah diterima</strong>. Status menyesuaikan sendiri: <strong>Sesuai</strong>, <strong>Kurang</strong>, atau <strong>Lebih</strong>. Tombol cepat: <strong>Semua datang</strong> dan <strong>Tidak datang</strong> (jumlah 0).</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/o17-terima-kurang.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/o17-terima-kurang.webp" alt="Pesan 2 kg, diterima 1,5 kg: otomatis Kurang." loading="lazy" width="400" height="860"></span></button><figcaption>Pesan 2 kg, diterima 1,5 kg: otomatis Kurang.</figcaption></figure>
+</li>
+<li class="step" data-role="outlet">
+  <div class="step-text">
+    <div class="step-head"><span class="num">5</span><span class="role r-outlet">Outlet</span></div>
+    <h4>Tandai barang rusak dan jelaskan</h4>
+    <p>Centang <strong>Ada yang rusak / tidak layak</strong>, tulis penjelasan di <strong>Catatan</strong> (mis. '0,5 kg busuk'), lalu <strong>Simpan</strong>. Catatan terbaca admin dan tukang belanja untuk ditindaklanjuti ke supplier.</p>
+    
+    <div class="callout warn"><b>Perhatian</b> Simpan atau foto barang rusak sampai admin menyatakan sudah ditangani.</div>
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/o18-terima-rusak.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/o18-terima-rusak.webp" alt="Centang rusak dan tulis catatan." loading="lazy" width="400" height="860"></span></button><figcaption>Centang rusak dan tulis catatan.</figcaption></figure>
+</li>
+<li class="step" data-role="outlet">
+  <div class="step-text">
+    <div class="step-head"><span class="num">6</span><span class="role r-outlet">Outlet</span></div>
+    <h4>Terima sisanya sesuai</h4>
+    <p>Setelah yang bermasalah dicatat, ketuk <strong>Terima sisanya sesuai</strong>. Semua barang lain otomatis tercatat sesuai pesanan. Hemat waktu bila sebagian besar barang sudah benar.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/o20-terima-semua.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/o20-terima-semua.webp" alt="Satu ketukan menyelesaikan sisanya." loading="lazy" width="400" height="860"></span></button><figcaption>Satu ketukan menyelesaikan sisanya.</figcaption></figure>
+</li>
+<li class="step" data-role="outlet">
+  <div class="step-text">
+    <div class="step-head"><span class="num">7</span><span class="role r-outlet">Outlet</span></div>
+    <h4>Cek ringkasan</h4>
+    <p>Kategori yang punya selisih ditandai merah <strong>Ada selisih</strong>. Salah catat? Ketuk lagi barangnya dan perbaiki, atau <strong>Hapus catatan</strong> untuk mengulang.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/o22-terima-home-selisih.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/o22-terima-home-selisih.webp" alt="Kategori dengan selisih ditandai merah." loading="lazy" width="400" height="860"></span></button><figcaption>Kategori dengan selisih ditandai merah.</figcaption></figure>
+</li></ol><div class="notes"><div class="note"><b>Jenis selisih dihitung server</b><span>Sesuai, kurang, dan lebih ditentukan otomatis dari angka. Hanya <strong>rusak</strong> yang dipilih manual.</span></div><div class="note"><b>Lima status penerimaan</b><span><strong>Sesuai</strong>, <strong>Kurang</strong>, <strong>Lebih</strong>, <strong>Rusak</strong>, <strong>Tidak datang</strong>.</span></div></div></section>
+<section class="phase" id="realisasi" data-who="admin">
+  <header class="phase-head">
+    <div class="phase-no">6</div>
+    <div>
+      <h2>📊 Admin memeriksa: dipesan vs dibeli vs diterima</h2>
+      <div class="meta"><span class="when">🕒 Setelah barang tiba (biasanya siang), dan berkala</span> <span class="role r-admin">Admin</span></div>
+    </div>
+  </header>
+  <p class="goal"><b>Tujuan.</b> Menutup lingkaran: apakah yang dipesan sama dengan yang dibeli dan yang tiba di outlet? Selisih ditindaklanjuti ke supplier, tukang belanja, atau outlet.</p>
+  <p class="lead">Dibuka dari <strong>Pantau → Realisasi</strong>. Tiga sumber data dipertemukan: pesanan outlet (Tahap 1), catatan pembelian tukang belanja (Tahap 4A), dan catatan penerimaan outlet (Tahap 5).</p>
+  <ol class="steps"><li class="step" data-role="admin">
+  <div class="step-text">
+    <div class="step-head"><span class="num">1</span><span class="role r-admin">Admin</span></div>
+    <h4>Baca empat angka utama</h4>
+    <p>Pilih tanggal kirim. <strong>Barang dibeli</strong> (mis. 17/18), <strong>Biaya nyata</strong> (total rupiah dari harga yang dicatat tukang belanja), <strong>Penerimaan selesai</strong> (berapa pencatatan outlet sudah selesai), dan <strong>Perlu dicek</strong> (jumlah selisih). Tanggalnya adalah tanggal kirim, jadi 'hari ini' bisa masih kosong dan otomatis melompat ke tanggal yang berisi.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/ad10-realisasi.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/ad10-realisasi.webp" alt="Ringkasan realisasi satu tanggal." loading="lazy" width="400" height="860"></span></button><figcaption>Ringkasan realisasi satu tanggal.</figcaption></figure>
+</li>
+<li class="step" data-role="admin">
+  <div class="step-text">
+    <div class="step-head"><span class="num">2</span><span class="role r-admin">Admin</span></div>
+    <h4>Telusuri selisih</h4>
+    <p>Daftar <strong>Perlu ditindaklanjuti</strong> menyebut jenis masalah: <strong>Tidak dibeli</strong>, <strong>Dibeli sebagian</strong>, <strong>Diganti barang lain</strong>, <strong>Tidak datang</strong>, <strong>Diterima rusak</strong>, <strong>Kurang diterima</strong>, <strong>Lebih diterima</strong>, lengkap dengan barang, outlet, catatan, dan angka pesan vs hasil. Gunakan untuk menegur supplier, menagih kekurangan, atau mengecek laporan outlet. <strong>Unduh CSV</strong> membawa datanya ke Excel.</p>
+    
+    
+  </div>
+  <figure class="shot"><button type="button" class="zoom" data-src="img/ad10b-realisasi-2.webp" aria-label="Perbesar gambar"><span class="phone"><img src="img/ad10b-realisasi-2.webp" alt="Contoh selisih: rusak, kurang diterima, dibeli sebagian." loading="lazy" width="400" height="860"></span></button><figcaption>Contoh selisih: rusak, kurang diterima, dibeli sebagian.</figcaption></figure>
+</li>
+<li class="step" data-role="admin">
+  <div class="step-text">
+    <div class="step-head"><span class="num">3</span><span class="role r-admin">Admin</span></div>
+    <h4>Memantau gudang</h4>
+    <p>Tab <strong>Stok</strong> (sama dengan milik Admin Keringan) dipakai admin untuk memeriksa stok menipis atau minus, dan <strong>Atur → Gudang</strong> menampilkan jejak audit aktivitas gudang, termasuk yang ditandai tidak wajar.</p>
+    
+    
+  </div>
+  
+</li></ol></section>
+
+<section id="faq" class="block">
+  <h2>Pertanyaan yang sering muncul</h2>
+  <div class="faqgroup" data-role="outlet"><h3><span class="role r-outlet">Outlet</span></h3><details><summary>Saya sudah mengirim tetapi ingin menambah satu barang.</summary><p>Bila daftar belum dilepas, ketuk <strong>Ubah pesanan</strong>, tambah barang, lalu <strong>Kirim</strong> lagi. Bila sudah ditutup, pakai <strong>Kirim susulan</strong> dan tunggu persetujuan admin.</p></details><details><summary>Pesanan saya hilang setelah menutup aplikasi.</summary><p>Draf tersimpan otomatis. Buka kembali kategorinya, drafnya muncul.</p></details><details><summary>Barang yang datang lebih banyak dari pesanan.</summary><p>Di tab <strong>Barang datang</strong> ketuk nama barangnya, isi jumlah sebenarnya. Status otomatis menjadi <strong>Lebih</strong>.</p></details><details><summary>Ada banner 'Ganti satuan pesanan'.</summary><p>Admin gudang menemukan satuan pesanan yang kurang tepat. Pakai satuan yang disarankan pada pesanan berikutnya.</p></details></div><div class="faqgroup" data-role="belanja"><h3><span class="role r-belanja">Tukang Belanja</span></h3><details><summary>Barang tidak ada di pasar.</summary><p>Ketuk nama barang, pilih <strong>Tidak ada</strong> (atau <strong>Ganti barang</strong>) dan tulis catatan. Admin dan outlet bisa melihatnya.</p></details><details><summary>Daftar belum muncul padahal outlet sudah selesai.</summary><p>Daftar diperbarui otomatis tiap 30 detik. Buka tab lain lalu kembali, atau tutup dan buka lagi aplikasinya.</p></details><details><summary>Pesan WhatsApp terkirim ke grup yang salah.</summary><p>Hapus pesan itu di WhatsApp, lalu ketuk <strong>Kirim lagi ke WhatsApp</strong> dan pilih grup yang benar.</p></details></div><div class="faqgroup" data-role="keringan"><h3><span class="role r-keringan">Gudang Keringan</span></h3><details><summary>Stok barang minus.</summary><p>Biasanya saldo awal salah atau ada barang keluar yang belum dicatat masuknya. Lakukan <strong>Opname</strong> dengan jumlah fisik.</p></details><details><summary>Barang pesanan tidak ada di daftar stok.</summary><p>Pilih <strong>Tanpa stok (tidak dilacak)</strong>. Bila seharusnya dipantau, tambahkan dulu lewat <strong>+ Barang</strong> di tab Stok.</p></details><details><summary>Salah memberi jumlah ke outlet.</summary><p>Buka lagi barisnya, ubah jumlah, <strong>Simpan</strong>: stok lama dikembalikan, stok baru dikurangi otomatis. Untuk menghapus, <strong>Batalkan pemberian</strong>.</p></details></div><div class="faqgroup" data-role="admin"><h3><span class="role r-admin">Admin</span></h3><details><summary>Ada outlet yang lupa mengisi setelah dilepas.</summary><p>Minta outlet mengirim <strong>susulan</strong>, lalu setujui. Atau <strong>tarik kembali pelepasan</strong> bila belum dikirim ke supplier.</p></details><details><summary>Kenapa angka Pantau berbeda dengan Realisasi?</summary><p>Pantau menunjukkan siapa yang sudah <strong>memesan</strong>. Realisasi menunjukkan <strong>hasil</strong>: dibeli, diterima, dan selisihnya.</p></details><details><summary>Outlet baru dibuka.</summary><p><strong>Atur → Outlet → Tambah outlet</strong>, lalu buat akun stafnya di tab <strong>Akun</strong> dengan centang outlet itu.</p></details></div>
+  <h3 class="mt">Istilah</h3>
+  <dl class="gloss"><div><dt>Kategori</dt><dd>Kelompok barang (Pasar, Keringan, Ayam Potong, Buah, Sayur, Bebek &amp; Ayam Kampung). Satu kategori = satu daftar.</dd></div><div><dt>Batch / daftar</dt><dd>Gabungan pesanan semua outlet untuk satu kategori dan satu tanggal kirim.</dd></div><div><dt>Jam tutup (cut-off)</dt><dd>Batas jam pengisian. Setelah lewat, daftar otomatis dilepas.</dd></div><div><dt>Dilepas</dt><dd>Daftar menjadi final dan diserahkan ke yang mengerjakan.</dd></div><div><dt>Susulan</dt><dd>Tambahan pesanan setelah daftar ditutup; wajib disetujui admin.</dd></div><div><dt>Tanggal kirim</dt><dd>Tanggal barang dibutuhkan. Menjadi tanggal acuan di semua layar.</dd></div><div><dt>Realisasi</dt><dd>Perbandingan pesanan, pembelian nyata, dan penerimaan nyata.</dd></div><div><dt>Opname</dt><dd>Menghitung fisik barang gudang lalu menyamakan angka sistem.</dd></div><div><dt>Pratinjau</dt><dd>Daftar yang belum final karena masih ada outlet yang belum mengisi.</dd></div></dl>
+</section>
+</main>
+
+<footer class="foot"><div class="wrap">
+  <p>Halaman panduan alur Belanja DS · gambar adalah potongan layar aplikasi dengan <b>data contoh</b>, bukan data asli.</p>
+  <p>Aplikasi: <a href="https://belanja-ds.web.app">belanja-ds.web.app</a> · by Dolan Sawah</p>
+</div></footer>
+
+<div class="lightbox" id="lb" hidden><button type="button" class="lb-x" aria-label="Tutup">✕</button><img alt=""></div>
+<script src="app.js"></script>
+</body>
+</html>
